@@ -9,7 +9,9 @@ document.onkeydown = function(e) {
     }
 };
 
-function countdown( elementName, minutes, seconds )
+
+
+function countdown( timer, minutes, seconds )
 {
     var element, endTime, hours, mins, msLeft, time;
 
@@ -22,7 +24,7 @@ function countdown( elementName, minutes, seconds )
     {
         msLeft = endTime - (+new Date);
         if ( msLeft < 1000 ) {
-            element.innerHTML = "countdown's over!";
+            element.innerHTML = "Time's up!";
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
@@ -32,9 +34,13 @@ function countdown( elementName, minutes, seconds )
         }
     }
 
-    element = document.getElementById( elementName );
+    element = document.getElementById("timer");
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    updateTimer();
+    updateTimer();1
+
+    document.getElementById("startButton").innerHTML = "Pause";
+    
 }
 
-countdown( "countdown", 0, 30 );
+countdown( "timer", 0, 30 );
+
