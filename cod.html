@@ -3,15 +3,104 @@
 	<title>Cat or Dog?</title>
 	<link rel="stylesheet" type="text/css" href="cod.css">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+// Set up the image files to be used.
+var theImages = new Array() 
+// do not change this
+// To add more image files, continue with the
+// pattern below, adding to the array.
+
+theImages[1] = 'image-cat1.jpg'
+theImages[2] = 'image-cat2.jpg'
+theImages[3] = 'image-cat3.jpg'
+theImages[4] = 'image-cat4.jpg'
+theImages[5] = 'image-cat5.jpg'
+theImages[6] = 'image-cat6.jpg'
+theImages[7] = 'image-cat7.jpg'
+theImages[8] = 'image-cat8.jpg'
+theImages[9] = 'image-cat9.jpg'
+theImages[10] = 'image-cat10.jpg'
+theImages[11] = 'image-cat11.jpg'
+theImages[12] = 'image-cat12.jpg'
+theImages[13] = 'image-cat13.jpg'
+theImages[14] = 'image-cat14.jpg'
+theImages[15] = 'image-cat15.jpg'
+theImages[16] = 'image-cat16.jpg'
+theImages[17] = 'image-cat17.jpg'
+theImages[18] = 'image-cat18.jpg'
+theImages[19] = 'image-cat19.jpg'
+theImages[20] = 'image-cat20.jpg'
+theImages[21] = 'image-cat21.jpg'
+theImages[22] = 'image-cat22.jpg'
+theImages[23] = 'image-cat23.jpg'
+theImages[24] = 'image-cat24.jpg'
+theImages[25] = 'image-cat25.jpg'
+theImages[26] = 'image-cat26.jpg'
+theImages[27] = 'image-cat27.jpg'
+theImages[28] = 'image-cat28.jpg'
+theImages[29] = 'image-cat29.jpg'
+theImages[30] = 'image-cat30.jpg'
+theImages[31] = 'image-dog1.jpg'
+theImages[32] = 'image-dog2.jpg'
+theImages[33] = 'image-dog3.jpg'
+theImages[34] = 'image-dog4.jpg'
+theImages[35] = 'image-dog5.jpg'
+theImages[36] = 'image-dog6.jpg'
+theImages[37] = 'image-dog7.jpg'
+theImages[38] = 'image-dog8.jpg'
+theImages[39] = 'image-dog9.jpg'
+theImages[40] = 'image-dog10.jpg'
+theImages[41] = 'image-dog11.jpg'
+theImages[42] = 'image-dog12.jpg'
+theImages[43] = 'image-dog13.jpg'
+theImages[44] = 'image-dog14.jpg'
+theImages[45] = 'image-dog15.jpg'
+theImages[46] = 'image-dog17.jpg'
+theImages[47] = 'image-dog18.jpg'
+theImages[48] = 'image-dog19.jpg'
+theImages[49] = 'image-dog20.jpg'
+theImages[50] = 'image-dog21.jpg'
+theImages[51] = 'image-dog22.jpg'
+theImages[52] = 'image-dog23.jpg'
+theImages[53] = 'image-dog24.jpg'
+theImages[54] = 'image-dog25.jpg'
+theImages[55] = 'image-dog26.jpg'
+theImages[56] = 'image-dog27.jpg'
+theImages[57] = 'image-dog28.jpg'
+theImages[58] = 'image-dog29.jpg'
+theImages[59] = 'image-dog30.jpg'
+theImages[60] = 'image-dog31.jpg'
+theImages[61] = 'image-dog32.jpg'
+
+// do not edit anything below this line
+
+var j = 0
+var p = theImages.length;
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+   preBuffer[i] = new Image()
+   preBuffer[i].src = theImages[i]
+}
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+document.write('<img src="'theImages[whichImage]+'">');
+}
+
+//  End -->
+</script>
+
 </head>
+
+
+
 
 <body>
 	<div>
 		<h1>Cat or Dog?</h1>
 	</div>
-	<div id="image">
-		<img src="/learn/javascript/BSD.jpg" name="slideImage"></td>
-	</div>
+
 	<div id="buttons">
 		<input value="Cat" type="submit" id="cat_button" href="JavaScript:nextImage()">
 		<input value="Dog" type="submit" id="dog_button" href="JavaScript:nextImage()">
