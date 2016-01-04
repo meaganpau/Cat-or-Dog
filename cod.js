@@ -39,8 +39,7 @@ function countdown( timer, minutes, seconds )
     updateTimer();1
 
     document.getElementById("startButton").innerHTML = "Pause";
-    
+    document.getElementById("image").innerHTML = "<img src='images/5.jpg'>"; 
 }
 
 countdown( "timer", 0, 30 );
-
