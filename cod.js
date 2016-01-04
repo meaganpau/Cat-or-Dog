@@ -11,9 +11,10 @@ document.onkeydown = function(e) {
 
 
 function start ()
-{
-        document.getElementById("image").innerHTML = "<img src='images/5.jpg'>";
-        document.getElementById("showButtons").innerHTML = "<input value='Cat' type='submit' id='cat_button' href='JavaScript:nextImage()''><input value='Dog' type='submit' id='dog_button' href='JavaScript:nextImage()''>";
+{   var x =  Math.floor((Math.random() * 61) + 1);   
+    document.getElementById("image").innerHTML = "<img src='images/" + x + ".jpg'; height='200px'>";
+    document.getElementById("showButtons").innerHTML = "<input value='Cat' type='submit' id='cat_button' href='JavaScript:nextImage()''><input value='Dog' type='submit' id='dog_button' href='JavaScript:nextImage()''>";
+//    document.getElementById("startButton").innerHTML = "<button id ='start' onclick='start()';>Start!</button>";
 }
 
 
@@ -44,7 +45,7 @@ function start ()
 //     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
 //     updateTimer();1
 
-//    document.getElementById("startButton").innerHTML = "Pause";
+
 // }
 
 //
