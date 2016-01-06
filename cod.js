@@ -10,11 +10,18 @@ document.onkeydown = function(e) {
 };
 
 
-function start ()
-{   var x =  Math.floor((Math.random() * 61) + 1);   
-    document.getElementById("image").innerHTML = "<img src='images/" + x + ".jpg'; height='200px'>";
+function start()
+{   
+    showPic ();   
+    countdown();
     document.getElementById("showButtons").innerHTML = "<input value='Cat' type='submit' id='cat_button' href='JavaScript:nextImage()''><input value='Dog' type='submit' id='dog_button' href='JavaScript:nextImage()''>";
     document.getElementById("startButton").innerHTML = "";
+}
+
+function showPic() 
+{
+    var x =  Math.floor((Math.random() * 61) + 1);   
+    document.getElementById("image").innerHTML = "<img src='images/" + x + ".jpg'; height='200px'>";
 }
 
 
