@@ -1,3 +1,4 @@
+var array = [];
 document.onkeydown = function(e) {
     switch (e.keyCode) {
         case 37:
@@ -9,57 +10,35 @@ document.onkeydown = function(e) {
     }
 };
 
-
-function start()
+function start() 
 {   
     showPic ();   
-    document.getElementById("showButtons").innerHTML = "<input value='Cat' type='submit' id='cat_button' href='JavaScript:nextImage()''><input value='Dog' type='submit' id='dog_button' href='JavaScript:nextImage()''>";
+    document.getElementById("showButtons").innerHTML = "<button id='cat_button' onclick='showPic()'>Cat</button><button id='dog_button' onclick='showPic()'>Dog</button>";
     document.getElementById("startButton").innerHTML = "";
     document.getElementById("startTime").innerHTML = "<div id='timer'></div>";
+    countdown("timer", 0, 30);
 }
 
 function showPic() 
 {
-    var x =  Math.floor((Math.random() * 61) + 1);   
-    document.getElementById("image").innerHTML = "<img src='images/" + x + ".jpg'; height='200px'>";
-}
+    var random_number = Math.floor((Math.random() * 61) + 1);
+    var randomIsInArray = array.indexOf(random_number) >= 0
 
+    while(randomIsInArray) {
+        //if array has 61 items, then BREAK
+        random_number = Math.floor((Math.random() * 61) + 1);
+        var randomIsInArray = array.indexOf(random_number) >= 0
+    }
 
+    array.push(random_number)
 
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-
-//         if (--timer < 0) {
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-
-// function countdown() {
-//     var thirty = 30,
-//         display = document.querySelector('#time');
-//     startTimer(thirty, display);
-// };
-
-
-
-
-function showTimer ()
-{
-    
+    document.getElementById("image").innerHTML = "<img src='images/" + random_number + ".jpg'; height='200px'>";
 }
 
 function countdown( elementName, minutes, seconds )
 {
     var element, endTime, hours, mins, msLeft, time;
+    element = document.getElementById( "timer" );
 
     function twoDigits( n )
     {
@@ -71,6 +50,7 @@ function countdown( elementName, minutes, seconds )
         msLeft = endTime - (+new Date);
         if ( msLeft < 1000 ) {
             element.innerHTML = "Time's Up!";
+            document.getElementById("showButtons").innerHTML = "";
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
@@ -80,11 +60,9 @@ function countdown( elementName, minutes, seconds )
         }
     }
 
-    element = document.getElementById( elementName );
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
     updateTimer();
 }
 
-countdown( "timer", 0, 30 );
 
 
