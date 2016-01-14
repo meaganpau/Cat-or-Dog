@@ -25,9 +25,13 @@ function showPic()
     var randomIsInArray = array.indexOf(random_number) >= 0
 
     while(randomIsInArray) {
-        //if array has 61 items, then BREAK
+        if(array.length === 2) {
+            break;
+        }
+        else    {
         random_number = Math.floor((Math.random() * 61) + 1);
         var randomIsInArray = array.indexOf(random_number) >= 0
+    }
     }
 
     array.push(random_number)
