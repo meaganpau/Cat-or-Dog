@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cat or Dog?</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div>
+		<h1>Cat or Dog?</h1>
+		<hr class="title-hr">
+		<p>How many can you get correct in 20 seconds?</p>
+	</div>
+	<div class="timer">20s</div>
+	<div class="image-container">
+		<div id="image"></div>
+		<div class="timesUp">
+			<h2>Time's Up!</h2>
+			<p id="finalScore"></p>
+		</div>
+		<div id="startButton">
+			<button id ="start">Start!</button>
+		</div>
+		<button id="refresh">Play Again</button>
+	</div>
+	<div class="button-container">
+		<div class="selectButtons">
+			<button id='cat_button'>Cat</button>
+			<button id='dog_button'>Dog</button>
+		</div>
+	</div>
+	<footer>
+		<p>Created by: <a href="http://meaganpau.com" target="_blank">Meagan Pau</a></p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

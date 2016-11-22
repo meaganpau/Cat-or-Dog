@@ -1,0 +1,110 @@
+@import 'normalize';
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 5px 2px;
+	border-bottom: 1px solid white;
+	transition: 0.3s all ease;
+	&:hover {
+		padding-bottom: 8px;
+	}
+}
+
+body {
+	background-color: #333;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	height: 650px;
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-size: 80px;
+}
+
+h2 {
+	text-align: center;
+	margin: 2%;
+}
+
+.title-hr {
+	width: 100px;
+	border: none;
+	border-bottom: 3px solid white;
+	margin-bottom: 2%;
+}
+
+#startTime {
+	font-size: 50px;
+}
+
+#start {
+	margin: 100px 0;
+}
+
+.selectButtons {
+	display: none;
+}
+
+.timer {
+	display: none;
+	margin: 2%;
+	font-size: 2rem;
+}
+
+.timesUp {
+	display: none;
+	margin: 100px 0;
+	letter-spacing: 1px;
+	font-size: 1.5rem;
+}
+
+button {
+	background: none;
+	border: 3px solid white;
+	color: white;
+	width: 200px;
+	height: 50px;
+	margin: 0px 20px;
+	font-weight: bolder;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#image img {
+	max-height: 200px;
+	border-radius: 10px;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.image-container {
+	height: 250px;
+}
+
+.button-select {
+	background: white;
+	color: black;
+}
+
+#refresh {
+	display: none;
+}
