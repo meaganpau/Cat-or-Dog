@@ -1,9 +1,0 @@
-Cat or Dog
-- 30 seconds for the game
-- You are shown a picture of a cat or dog
-- Below the picture is two buttons, Cat and Dog
-- You need to click the right one to get a point
-- If time runs out, game over
-- If you guess wrong, game over
-- High score table (# of correct answers in 30 seconds)
-**BONUS - you can assign left and right arrow keys for the player to use for the cat/dog buttons
