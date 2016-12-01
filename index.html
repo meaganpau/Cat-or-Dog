@@ -12,10 +12,8 @@
 	<div>
 		<h1>Cat or Dog?</h1>
 		<hr class="title-hr">
-		<p>How many can you get correct in 20 seconds?</p>
-	</div>
-	<table class="leaderboard">
-	</table>
+		<p class="sub-title">How many can you get right in 20 seconds?</p>
+		<p class="sub-title2">(Hint: You can use your left and right arrow keys!)</p>		
 	</div>
 	<div class="timer">20s</div>
 	<div class="image-container">
@@ -24,18 +22,23 @@
 			<h2>Time's Up!</h2>
 			<p id="finalScore"></p>
 			<p id="accuracy"></p>
-			<form>
+			<button id="refresh">Play Again</button>
+			<table class="leaderboard-headers">
+				<tr>
+					<td class="leaderboard-headers--name">Name</td>
+					<td class="leaderboard-headers--score">Score</td>
+					<td class="leaderboard-headers--accuracy">Accuracy</td>
+				</tr>
+			</table>
+			<table class="leaderboard"></table>
+			<form class="leaderboard-submit">
 				<input required type="text" name="" value="" placeholder="Name" id="name">
 				<button type="button" name="button" id="name-submit">Submit</button>
 			</form>
-			<!-- <div class="leaderboard">
-
-			</div> -->
 		</div>
 		<div id="startButton">
 			<button id ="start">Start!</button>
 		</div>
-		<button id="refresh">Play Again</button>
 	</div>
 	<div class="button-container">
 		<div class="selectButtons">

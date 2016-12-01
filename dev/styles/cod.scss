@@ -66,7 +66,6 @@ h2 {
 
 .timesUp {
 	display: none;
-	margin: 100px 0;
 	letter-spacing: 1px;
 	font-size: 1.5rem;
 }
@@ -81,6 +80,7 @@ button {
 	font-weight: bolder;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	font-size: 1rem;
 	&:active {
 		background: white;
 		color: black;
@@ -111,4 +111,50 @@ footer {
 
 #refresh {
 	display: none;
+}
+
+.leaderboard {
+	margin: 0 auto;
+	font-size: 1.2rem;
+}
+
+.leaderboard-headers {
+	margin: 10px auto;
+	text-align: left;
+	font-weight: bold;
+}
+
+.leaderBoard-name, .leaderboard-headers--name {
+	width: 300px;
+	text-align: left;	
+}
+.leaderBoard-score, .leaderboard-headers--score {
+	width: 100px;
+	text-align: center;
+}
+.leaderBoard-accuracy, .leaderboard-headers--accuracy {
+	width: 100px;
+	text-align: center;	
+}
+
+.leaderboard-submit {
+	margin: 30px auto;
+	input[type=text] {
+		font-size: 1rem;
+		height: 40px;
+		width: 200px;
+		padding: 10px;
+		margin: 0px 20px;
+	}
+}
+
+#finalScore, #accuracy {
+	display: inline-block;
+	margin: 0 30px;
+}
+
+.sub-title2 {
+	margin-top: 5px;
+	font-style: italic;
+	color: #ccc;
 }
