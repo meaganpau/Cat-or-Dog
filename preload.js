@@ -1,0 +1,77 @@
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+preload([
+    'images/dog/1.jpg',
+    'images/dog/2.jpg',
+    'images/dog/3.jpg',
+    'images/dog/4.jpg',
+    'images/dog/5.jpg',
+    'images/dog/6.jpg',
+    'images/dog/7.jpg',
+    'images/dog/8.jpg',
+    'images/dog/9.jpg',
+    'images/dog/10.jpg',
+    'images/dog/11.jpg',
+    'images/dog/12.jpg',
+    'images/dog/13.jpg',
+    'images/dog/14.jpg',
+    'images/dog/15.jpg',
+    'images/dog/16.jpg',
+    'images/dog/17.jpg',
+    'images/dog/18.jpg',
+    'images/dog/19.jpg',
+    'images/dog/20.jpg',
+    'images/dog/21.jpg',
+    'images/dog/22.jpg',
+    'images/dog/23.jpg',
+    'images/dog/24.jpg',
+    'images/dog/25.jpg',
+    'images/dog/26.jpg',
+    'images/dog/27.jpg',
+    'images/dog/28.jpg',
+    'images/dog/29.jpg',
+    'images/dog/30.jpg',
+    'images/dog/31.jpg',
+    'images/cat/1.jpg',
+    'images/cat/2.jpg',
+    'images/cat/3.jpg',
+    'images/cat/4.jpg',
+    'images/cat/5.jpg',
+    'images/cat/6.jpg',
+    'images/cat/7.jpg',
+    'images/cat/8.jpg',
+    'images/cat/9.jpg',
+    'images/cat/10.jpg',
+    'images/cat/11.jpg',
+    'images/cat/12.jpg',
+    'images/cat/13.jpg',
+    'images/cat/14.jpg',
+    'images/cat/15.jpg',
+    'images/cat/16.jpg',
+    'images/cat/17.jpg',
+    'images/cat/18.jpg',
+    'images/cat/19.jpg',
+    'images/cat/20.jpg',
+    'images/cat/21.jpg',
+    'images/cat/22.jpg',
+    'images/cat/23.jpg',
+    'images/cat/24.jpg',
+    'images/cat/25.jpg',
+    'images/cat/26.jpg',
+    'images/cat/27.jpg',
+    'images/cat/28.jpg',
+    'images/cat/29.jpg',
+    'images/cat/30.jpg'
+
+]);
+
+$(function(){
+     $(window).load(function(){
+        $('.loader').hide();
+        $('main').show();
+    });
+})

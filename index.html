@@ -6,54 +6,61 @@
 	<title>Cat or Dog?</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+	<script src="preload.js"></script>
 </head>
 
 <body>
-	<div>
-		<h1>Cat or Dog?</h1>
-		<hr class="title-hr">
-		<p class="sub-title">How many can you get right in 20 seconds?</p>
-		<p class="sub-title2">(Hint: You can use your left and right arrow keys!)</p>		
+	<div class="loader">
+		<div id="loader-1"></div>
+		<h2>Loading...</h2>
 	</div>
-	<div class="timer">20s</div>
-	<div class="image-container">
-		<div id="image"></div>
-		<div class="timesUp">
-			<h2>Time's Up!</h2>
-			<p id="finalScore"></p>
-			<p id="accuracy"></p>
-			<button id="refresh">Play Again</button>
-			<table class="leaderboard-headers">
-				<tr>
-					<td class="leaderboard-headers--name">Name</td>
-					<td class="leaderboard-headers--score">Score</td>
-					<td class="leaderboard-headers--accuracy">Accuracy</td>
-				</tr>
-			</table>
-			<table class="leaderboard"></table>
-			<form class="leaderboard-submit">
-				<input required type="text" name="" value="" placeholder="Name" id="name">
-				<button type="button" name="button" id="name-submit">Submit</button>
-			</form>
+	<main>
+		<div>
+			<h1>Cat or Dog?</h1>
+			<hr class="title-hr">
+			<p class="sub-title">How many can you get right in 20 seconds?</p>
+			<p class="sub-title2">(Hint: You can use your left and right arrow keys!)</p>		
 		</div>
-		<div id="startButton">
-			<button id ="start">Start!</button>
+		<div class="timer">20s</div>
+		<div class="image-container">
+			<div id="image"></div>
+			<div class="timesUp">
+				<h2>Time's Up!</h2>
+				<p id="finalScore"></p>
+				<p id="accuracy"></p>
+				<button id="refresh">Play Again</button>
+				<table class="leaderboard-headers">
+					<tr>
+						<td class="leaderboard-headers--name">Name</td>
+						<td class="leaderboard-headers--score">Score</td>
+						<td class="leaderboard-headers--accuracy">Accuracy</td>
+					</tr>
+				</table>
+				<table class="leaderboard"></table>
+				<form class="leaderboard-submit">
+					<input required type="text" name="" value="" placeholder="Name" id="name">
+					<button type="button" name="button" id="name-submit">Submit</button>
+				</form>
+			</div>
+			<div id="startButton">
+				<button id ="start">Start!</button>
+			</div>
 		</div>
-	</div>
-	<div class="button-container">
-		<div class="selectButtons">
-			<button id='cat_button'>Cat</button>
-			<button id='dog_button'>Dog</button>
+		<div class="button-container">
+			<div class="selectButtons">
+				<button id='cat_button'>Cat</button>
+				<button id='dog_button'>Dog</button>
+			</div>
 		</div>
-	</div>
-	<footer>
-		<p>Created by: <a href="http://meaganpau.com" target="_blank">Meagan Pau</a></p>
-	</footer>
+		<footer>
+			<p>Created by: <a href="http://meaganpau.com" target="_blank">Meagan Pau</a></p>
+		</footer>
+	</main>
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-storage.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="main.js"></script>
 </body>
 
