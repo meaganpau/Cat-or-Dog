@@ -83,7 +83,6 @@ $(function () {
                     $('#dog_button').addClass('button-select');
                     break;
                 }
-
         }
     };
 
@@ -167,8 +166,12 @@ $(function () {
             array.push({ name: leaderBoardEach['name'], score: leaderBoardEach['score'], accuracy: leaderBoardEach['accuracy'] });
         };
         array.sort(function (a, b) {
-            // return b.accuracy - a.accuracy;
-            return b.score - a.score;
+
+            if (b.accuracy == a.accuracy) {
+                console.log(b.accuracy, a.accuracy);
+                return b.score - a.score;
+            }
+            return b.accuracy - a.accuracy;
         });
 
         clearLeaderBoard();
