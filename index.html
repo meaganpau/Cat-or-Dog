@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		// Sets the page's base URL at runtime so relative asset paths
+		// (style.css, images/dog/1.jpg, etc.) resolve correctly whether
+		// this is served at its own root (local dev, the Vercel preview
+		// URL) or proxied under /cat-or-dog/ in production
+		// (meaganpau.com/cat-or-dog via meaganpau-portfolio's rewrites).
+		document.write('<base href="' + (location.pathname.indexOf('/cat-or-dog') === 0 ? '/cat-or-dog/' : '/') + '">');
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cat or Dog?</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
